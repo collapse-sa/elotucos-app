@@ -2,6 +2,7 @@ import "./home.css";
 import heroImg from "../../assets/img/elotucos_home_img.png";
 import logo from "../../assets/img/elotucos_toolbar_logo.png";
 import tostitos from "../../assets/img/elotucos_tostitos_img.png";
+import maruchanImg from "../../assets/img/elotucos_marucha_elote.png";
 
 export default function Home() {
   const menuItems = [
@@ -116,6 +117,30 @@ export default function Home() {
                 <span className="menu-feature-tag">Individual</span>
                 <span className="menu-feature-price">$80</span>
             </div>
+            </div>
+        </div>
+
+        <div className="menu-feature menu-feature-reverse">
+            <div className="menu-feature-content">
+                <h3 className="menu-feature-name">Maruchan con Elote</h3>
+
+                <p className="menu-feature-desc">
+                Maruchan preparada con elote, crema, queso, salsas y ese toque picosito
+                que la hace irresistible.
+                </p>
+
+                <div className="menu-feature-meta">
+                <span className="menu-feature-tag">Individual</span>
+                <span className="menu-feature-price">$85</span>
+                </div>
+            </div>
+
+            <div className="menu-feature-image-wrap menu-feature-image-wrap-right">
+                <img
+                src={maruchanImg}
+                alt="Maruchan con elote"
+                className="menu-feature-image menu-feature-image-maruchan"
+                />
             </div>
         </div>
 
