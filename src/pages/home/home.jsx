@@ -1,6 +1,7 @@
 import "./home.css";
 import heroImg from "../../assets/img/elotucos_home_img.png";
 import logo from "../../assets/img/elotucos_toolbar_logo.png";
+import tostitos from "../../assets/img/elotucos_tostitos_img.png";
 
 export default function Home() {
   const menuItems = [
@@ -92,30 +93,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="menu">
-        <div className="section-head">
-          <div>
-            <div className="section-label">Menú</div>
-            <h2 className="section-title">Tus favoritos en una sola vista</h2>
-            <p className="section-desc">
-              Inspirado en sitios de elotes con estilo comercial fuerte, pero adaptado
-              a una propuesta más limpia, cálida y llamativa para tu marca.
-            </p>
-          </div>
+      <section className="section menu-section" id="menu">
+        <div className="menu-header">
+            <div className="menu-kicker">MENÚ</div>
+            <h2 className="menu-main-title">Lo más pedido</h2>
         </div>
 
-        <div className="menu-grid">
-          {menuItems.map((item, index) => (
-            <article className="menu-card" key={item.title}>
-              <span className="menu-tag">Popular #{index + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-              <div className="price-row">
-                <span className="price">{item.price}</span>
-                <span className="chip">Muy pedido</span>
-              </div>
+        <div className="menu-feature">
+            <div className="menu-feature-image-wrap">
+            <img src={tostitos} alt="Esquite loco" className="menu-feature-image" />
+            </div>
+
+            <div className="menu-feature-content">
+            <h3 className="menu-feature-name">Esquite Loco</h3>
+
+            <p className="menu-feature-desc">
+                Doritos, elote blanco o amarillo, crema o mayonesa, espolvoreado,
+                queso amarillo, queso molido y salsas.
+            </p>
+
+            <div className="menu-feature-meta">
+                <span className="menu-feature-tag">Individual</span>
+                <span className="menu-feature-price">$80</span>
+            </div>
+            </div>
+        </div>
+
+        <div className="menu-list">
+            {menuItems.map((item) => (
+            <article className="menu-list-item" key={item.title}>
+                <div className="menu-list-text">
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+                </div>
+                <span className="menu-list-price">{item.price}</span>
             </article>
-          ))}
+            ))}
         </div>
       </section>
 
