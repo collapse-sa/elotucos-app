@@ -43,8 +43,6 @@ export default function Home() {
 
   return (
     <div className="page-shell">
-      <div className="floating-kernel" />
-
       <div className="navbar-wrap">
         <nav className="navbar">
           <div className="brand">
@@ -64,16 +62,16 @@ export default function Home() {
       </div>
 
       <section className="hero" id="inicio">
+
+        {/* 🔥 ELOTITOS DECORATIVOS */}
+        <img src={logo} className="floating-elote elote-1" alt="" />
+        <img src={logo} className="floating-elote elote-2" alt="" />
+
         <div className="hero-copy">
           <div className="eyebrow">🌶️ El sabor que sí antoja</div>
           <h2 className="hero-title">
             Elotes con <span>mucho antojo</span>, sabor y estilo.
           </h2>
-          <p className="hero-desc">
-            Una landing vibrante para tu puesto de elotes, con una imagen moderna,
-            cálida y muy apetecible. Ideal para mostrar tus platillos, promocionar
-            eventos, ubicar tus sucursales y hacer que más personas te contacten.
-          </p>
 
           <div className="hero-actions">
             <a href="#menu" className="btn-primary">Ver menú</a>
