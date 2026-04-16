@@ -3,6 +3,8 @@ import heroImg from "../../assets/img/elotucos_home_img.png";
 import logo from "../../assets/img/elotucos_toolbar_logo.png";
 import tostitos from "../../assets/img/elotucos_tostitos_img.png";
 import maruchanImg from "../../assets/img/elotucos_marucha_elote.png";
+import mediolitroImg from "../../assets/img/medio-litro.png";
+import tostitosImg from "../../assets/img/mega-espolvoreado.png";
 
 export default function Home() {
   const menuItems = [
@@ -144,76 +146,142 @@ export default function Home() {
             </div>
         </div>
 
-        <div className="menu-list">
-            {menuItems.map((item) => (
-            <article className="menu-list-item" key={item.title}>
-                <div className="menu-list-text">
-                <h4>{item.title}</h4>
-                <p>{item.desc}</p>
-                </div>
-                <span className="menu-list-price">{item.price}</span>
-            </article>
-            ))}
-        </div>
-      </section>
+        <div className="menu-cards-row">
+          <article className="menu-mini-card">
+            <img src={maruchanImg} alt="Mega Loco" className="menu-mini-image" />
 
-      <section className="section" id="eventos">
-        <div className="section-head">
-          <div>
-            <div className="section-label">Eventos</div>
-            <h2 className="section-title">Llevamos el sabor a tu evento</h2>
-            <p className="section-desc">
-              Esta sección está pensada para convertir visitas en contrataciones,
-              destacando tus servicios para fiestas, reuniones y celebraciones.
-            </p>
-          </div>
-        </div>
+            <div className="menu-mini-info">
+              <div className="menu-mini-top">
+                <h4>Mega Loco</h4>
+                <span>$135</span>
+              </div>
 
-        <div className="events-grid">
-          {events.map((event) => (
-            <article className="event-card" key={event}>
-              <div className="event-icon">🎉</div>
-              <h3>{event}</h3>
               <p>
-                Servicio con presentación atractiva, atención rápida y una propuesta
-                perfecta para consentir a tus invitados.
+                Doritos, doble porción de elote, crema o mayonesa, espolvoreado,
+                queso amarillo, queso molido y salsas.
               </p>
-            </article>
-          ))}
+            </div>
+          </article>
+
+          <article className="menu-mini-card">
+            <img src={mediolitroImg} alt="Vaso medio litro" className="menu-mini-image" />
+
+            <div className="menu-mini-info">
+              <div className="menu-mini-top">
+                <h4>Vaso Medio Litro</h4>
+                <span>$75</span>
+              </div>
+
+              <p>
+                Elote blanco o amarillo en vaso de medio litro con crema o mayonesa,
+                queso amarillo y salsas.
+              </p>
+            </div>
+          </article>
+
+          <article className="menu-mini-card">
+            <img src={tostitosImg} alt="Mega Espolvoreado" className="menu-mini-image" />
+
+            <div className="menu-mini-info">
+              <div className="menu-mini-top">
+                <h4>Mega Espolvoreado</h4>
+                <span>$92</span>
+              </div>
+
+              <p>
+                Vaso de medio litro con elote blanco o amarillo, queso amarillo,
+                espolvoreado y salsas.
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section className="section" id="sucursales">
-        <div className="section-head">
-          <div>
-            <div className="section-label">Sucursales</div>
-            <h2 className="section-title">Encuéntranos y lánzate por tu antojo</h2>
-            <p className="section-desc">
-              Dejé conectada la llamada a Google Maps usando el enlace que compartiste,
-              para que puedas reutilizarlo directamente como CTA principal.
+      <section className="section events-mosaic-section" id="eventos">
+        <div className="events-mosaic-top">
+          <div className="events-mosaic-heading">
+            <span className="events-mosaic-kicker">EVENTOS</span>
+            <h2 className="events-mosaic-title">Llevamos Elotucos a tu evento</h2>
+          </div>
+
+          <div className="events-mosaic-intro">
+            <p>
+              Llevamos nuestros elotes y botanas para que tu evento se vea, se disfrute
+              y se recuerde. Ideal para cumpleaños, reuniones familiares, fiestas
+              privadas y celebraciones especiales.
             </p>
+
+            <div className="events-mosaic-actions">
+              <span className="events-mosaic-tag">Servicio para eventos</span>
+              <a href="#contacto" className="events-mosaic-btn">Cotizar</a>
+            </div>
           </div>
         </div>
 
-        <div className="branches-grid">
-          {branches.map((branch) => (
-            <article className="branch-card" key={branch.name}>
-              <h3>{branch.name}</h3>
-              <p>{branch.address}</p>
-              <div className="branch-meta">
-                <span className="meta-pill">{branch.schedule}</span>
-                <span className="meta-pill">Pedidos por mensaje</span>
-              </div>
-              <div className="branch-actions">
-                <a className="btn-primary" href={branch.map} target="_blank" rel="noreferrer">
-                  Abrir en Maps
-                </a>
-                <a className="btn-secondary" href="#contacto">
-                  Contactar
-                </a>
-              </div>
-            </article>
-          ))}
+        <div className="events-mosaic-grid">
+          <article className="events-mosaic-card events-mosaic-card-large">
+            <img src={heroImg} alt="Evento Elotucos principal" />
+          </article>
+
+          <article className="events-mosaic-card">
+            <img src={maruchanImg} alt="Maruchan con elote" />
+          </article>
+
+          <article className="events-mosaic-card">
+            <img src={tostitosImg} alt="Tostitos preparados" />
+          </article>
+
+          <article className="events-mosaic-card">
+            <img src={logo} alt="Logo Elotucos" />
+          </article>
+
+          <article className="events-mosaic-card">
+            <img src={heroImg} alt="Montaje Elotucos" />
+          </article>
+
+          <article className="events-mosaic-card">
+            <img src={maruchanImg} alt="Producto especial Elotucos" />
+          </article>
+        </div>
+      </section>
+
+      <section className="section sucursales-section" id="sucursales">
+        <span className="section-kicker">SUCURSALES</span>
+
+        <h2 className="section-title">
+          Encuéntranos y lánzate por tu antojo
+        </h2>
+
+        <p className="section-desc">
+          Estamos listos para atenderte. Ven a visitarnos o abre la ubicación directamente en Google Maps.
+        </p>
+
+        <div className="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=Blvd.+Rogelio+Cantú+Gómez+650,+Monterrey,+NL&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Ubicación Elotucos"
+          ></iframe>
+        </div>
+
+        <div className="map-actions">
+          <a
+            href="https://www.google.com/maps?q=Blvd.+Rogelio+Cantú+Gómez+650,+Monterrey,+NL"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Abrir en Maps
+          </a>
+
+          <a href="#contacto" className="btn-secondary">
+            Contactar
+          </a>
         </div>
       </section>
 
