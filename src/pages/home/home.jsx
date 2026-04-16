@@ -7,43 +7,6 @@ import mediolitroImg from "../../assets/img/medio-litro.png";
 import tostitosImg from "../../assets/img/mega-espolvoreado.png";
 
 export default function Home() {
-  const menuItems = [
-    {
-      title: "Elote Clásico",
-      desc: "Elote entero con crema, mayonesa, queso y chile al gusto.",
-      price: "$45",
-    },
-    {
-      title: "Esquite Supremo",
-      desc: "Vaso generoso de granos de elote con mantequilla, queso y salsas especiales.",
-      price: "$60",
-    },
-    {
-      title: "Elote Flamin'",
-      desc: "Combinación botanera con frituras, queso amarillo y toque picosito.",
-      price: "$75",
-    },
-    {
-      title: "Maruchan con Elote",
-      desc: "La favorita para el antojo fuerte, cremosa y con mucho sabor.",
-      price: "$85",
-    },
-  ];
-
-  const branches = [
-    {
-      name: "Sucursal Principal",
-      address: "Ubicación en Google Maps",
-      schedule: "Lunes a Domingo · 6:00 PM a 11:00 PM",
-      map: "https://maps.app.goo.gl/LfYRpwku5iFo1Sxb8",
-    },
-  ];
-
-  const events = [
-    "Cumpleaños y reuniones familiares",
-    "Eventos escolares y empresariales",
-    "Contrataciones para bodas y fiestas",
-  ];
 
   return (
     <div className="page-shell">
