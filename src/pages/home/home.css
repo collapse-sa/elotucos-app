@@ -1211,3 +1211,79 @@ a {
   justify-content: center;
   gap: 16px;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f5e6c8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 0 0 20px 20px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+
+
+
+  .hero-visual {
+    min-height: 320px;
+    display: grid;
+    place-items: center;
+  }
+
+  .offer-card {
+    right: 10px;
+    bottom: -50px;
+  }
+}

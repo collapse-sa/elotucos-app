@@ -1,30 +1,51 @@
 import "./home.css";
+import { useState } from "react";
+
 import heroImg from "../../assets/img/elotucos_home_img.png";
 import logo from "../../assets/img/elotucos_toolbar_logo.png";
 import tostitos from "../../assets/img/elotucos_tostitos_img.png";
 import maruchanImg from "../../assets/img/elotucos_marucha_elote.png";
 import mediolitroImg from "../../assets/img/medio-litro.png";
 import tostitosImg from "../../assets/img/mega-espolvoreado.png";
+import ev1 from "../../assets/img/event_5.png";
+import ev2 from "../../assets/img/event_1.jfif";
+import ev3 from "../../assets/img/event_2.jfif";
+import ev4 from "../../assets/img/event_3.jpg";
+import ev5 from "../../assets/img/event_4.jpg";
+
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="page-shell">
       <div className="navbar-wrap">
-        <nav className="navbar">
-          <div className="brand">
-            <img src={logo} alt="Elotucos Logo" className="brand-logo" />
-          </div>
+          <nav className="navbar">
+            
+            <div className="brand">
+              <img src={logo} alt="Elotucos Logo" className="brand-logo" />
+            </div>
 
-          <div className="nav-links">
-            <a href="#inicio">Home</a>
-            <a href="#menu">Menú</a>
-            <a href="#eventos">Eventos</a>
-            <a href="#sucursales">Sucursales</a>
-            <a href="#contacto">Contacto</a>
-          </div>
+            {/* BOTÓN HAMBURGUESA */}
+            <button 
+              className="menu-toggle"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              ☰
+            </button>
 
-          <a className="nav-cta" href="#contacto">Pedir ahora</a>
+            {/* LINKS */}
+            <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+              <a href="#inicio">Home</a>
+              <a href="#menu">Menú</a>
+              <a href="#eventos">Eventos</a>
+              <a href="#sucursales">Sucursales</a>
+              <a href="#contacto">Contacto</a>
+            </div>
+
+            {/* BOTÓN SOLO DESKTOP */}
+            <a className="nav-cta" href="#contacto">Pedir ahora</a>
+
         </nav>
       </div>
 
@@ -183,19 +204,19 @@ export default function Home() {
 
         <div className="events-mosaic-grid">
           <article className="events-mosaic-card events-mosaic-card-large">
-            <img src={heroImg} alt="Evento Elotucos principal" />
+            <img src={ev1} alt="Evento Elotucos principal" />
           </article>
 
           <article className="events-mosaic-card">
-            <img src={maruchanImg} alt="Maruchan con elote" />
+            <img src={ev2} alt="Maruchan con elote" />
           </article>
 
           <article className="events-mosaic-card">
-            <img src={tostitosImg} alt="Tostitos preparados" />
+            <img src={ev3} alt="Tostitos preparados" />
           </article>
 
           <article className="events-mosaic-card">
-            <img src={logo} alt="Logo Elotucos" />
+            <img src={ev4} alt="Logo Elotucos" />
           </article>
 
           <article className="events-mosaic-card">
@@ -203,7 +224,7 @@ export default function Home() {
           </article>
 
           <article className="events-mosaic-card">
-            <img src={maruchanImg} alt="Producto especial Elotucos" />
+            <img src={ev5} alt="Producto especial Elotucos" />
           </article>
         </div>
       </section>
